@@ -1,0 +1,56 @@
+{
+  "name": "deadline-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Deadline (Thinkbox) documentation search and retrieval",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "deadline-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "index-docs": "node dist/index-docs.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "cheerio": "^1.0.0",
+    "fuse.js": "^7.0.0",
+    "glob": "^10.3.0",
+    "html-to-text": "^9.0.5",
+    "node-html-parser": "^6.1.12",
+    "sqlite3": "^5.1.6",
+    "turndown": "^7.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/html-to-text": "^9.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "deadline",
+    "thinkbox",
+    "documentation",
+    "search",
+    "model-context-protocol"
+  ],
+  "author": "Jack J",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/deadline-mcp-server.git"
+  },
+  "homepage": "https://github.com/your-username/deadline-mcp-server#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 
